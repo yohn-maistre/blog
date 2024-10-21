@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content'
 
 export async function GET(context: APIContext) {
   try {
-    const blog = (await getCollection('blog')).filter(
+    const blog = (await getCollection('posts')).filter(
       (post) => !post.data.draft,
     )
 

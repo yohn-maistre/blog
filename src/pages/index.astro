@@ -14,7 +14,7 @@ import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
-const blog = (await getCollection('blog'))
+const blog = (await getCollection('posts'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE)
@@ -85,7 +85,7 @@ const blog = (await getCollection('blog'))
       </ul>
       <div class="flex justify-center">
         <Link
-          href="/blog"
+          href="/blog/view-all/"
           class={buttonVariants({ variant: 'ghost' }) + ' group'}
         >
           See all posts <span

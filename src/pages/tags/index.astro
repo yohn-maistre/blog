@@ -7,7 +7,7 @@ import Layout from '@/layouts/Layout.astro'
 import { Icon } from 'astro-icon/components'
 import { getCollection } from 'astro:content'
 
-const blog = (await getCollection('blog')).filter((post) => !post.data.draft)
+const blog = (await getCollection('posts')).filter((post) => !post.data.draft)
 
 const tags = blog
   .flatMap((post) => post.data.tags)
