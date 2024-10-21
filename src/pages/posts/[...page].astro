@@ -13,7 +13,7 @@ export async function getStaticPaths({
 }: {
   paginate: PaginateFunction
 }) {
-  const allPosts = await getCollection('blog', ({ data }) => !data.draft)
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft)
   return paginate(
     allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
     { pageSize: SITE.POSTS_PER_PAGE },
