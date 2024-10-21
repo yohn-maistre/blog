@@ -22,6 +22,8 @@ import icon from 'astro-icon'
 export default defineConfig({
   site: 'https://yose.is-a.dev/blog',
   base: '/blog',
+  output: 'static',
+  trailingSlash: 'always',
   integrations: [
     tailwind({
       applyBaseStyles: false,
