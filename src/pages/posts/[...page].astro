@@ -23,7 +23,7 @@ export async function getStaticPaths({
 const { page } = Astro.props
 
 const postsByYear = page.data.reduce(
-  (acc: Record<string, CollectionEntry<'blog'>[]>, post) => {
+  (acc: Record<string, CollectionEntry<'posts'>[]>, post) => {
     const year = post.data.date.getFullYear().toString()
     ;(acc[year] ??= []).push(post)
     return acc
