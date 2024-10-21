@@ -62,7 +62,7 @@ const authors = await parseAuthors(post.data.authors ?? [])
   <Container class="flex flex-col gap-y-6">
     <Breadcrumbs
       items={[
-        { href: '/blog', label: 'Blog', icon: 'lucide:archive' },
+        { href: '/blog/posts', label: 'Blog', icon: 'lucide:archive' },
         { label: post.data.title, icon: 'lucide:file-text' },
       ]}
     />
@@ -103,7 +103,7 @@ const authors = await parseAuthors(post.data.authors ?? [])
                       />
                       {author.isRegistered ? (
                         <Link
-                          href={`/authors/${author.name}`}
+                          href={`/blog/authors/${author.name}`}
                           underline
                           class="text-foreground"
                         >
