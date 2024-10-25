@@ -85,7 +85,7 @@ const blog = (await getCollection('posts'))
       </ul>
       <div class="flex justify-center">
         <Link
-          href="/blog/view-all/"
+          href="/blog/posts/"
           class={buttonVariants({ variant: 'ghost' }) + ' group'}
         >
           See all posts <span
@@ -95,5 +95,6 @@ const blog = (await getCollection('posts'))
         </Link>
       </div>
     </section>
+    
   </Container>
 </Layout>
