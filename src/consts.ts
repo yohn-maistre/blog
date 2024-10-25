@@ -13,19 +13,17 @@ export type Link = {
 }
 
 export const SITE: Site = {
-  TITLE: 'yose',
+  TITLE: 'yose.is-a.dev',
   DESCRIPTION:
     'this is a blog focused on the things i do as a developer',
   EMAIL: 'giyaibo@pm.me',
-  NUM_POSTS_ON_HOMEPAGE: 2,
-  POSTS_PER_PAGE: 3,
+  NUM_POSTS_ON_HOMEPAGE: 3,
+  POSTS_PER_PAGE: 5,
   SITEURL: 'https://yose.is-a.dev/blog',
 }
 
 export const NAV_LINKS: Link[] = [
   { href: '/blog/posts', label: 'all posts' },
-  { href: '/blog/authors', label: 'authors' },
-  { href: '/blog/about', label: 'projects' },
   { href: '/blog/tags', label: 'tags' },
 ]
 
